@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "pino": "^8.6.1",
+    "pino-pretty": "^9.1.0"
+  }
+}

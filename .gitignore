@@ -1,0 +1,7 @@
+docker-pat.txt
+/node_modules
+/config/
+/play/
+*/uploads
+/package-lock.json
+.env
