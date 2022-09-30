@@ -45,3 +45,4 @@ function runCheck() {
 
 runCheck();
 //exec("docker stop blockscout");
+//exec("docker start blockscout");
