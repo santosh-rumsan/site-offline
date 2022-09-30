@@ -35,8 +35,12 @@ function runCheck() {
     "https://explorer.rumsan.com/api?module=account&action=eth_get_balance&address=0x4ff77d940fc9dbc207997d7e6ce8a7368af77aa8",
     function (check) {
       if (!check) {
-        exec("docker restart blockscout");
-        exec("docker restart eth-explorer-offchain");
+        exec("docker restart blockscout", (err, std) => {
+          console.log(std);
+        });
+        exec("docker restart eth-explorer-offchain", (err, std) => {
+          console.log(std);
+        });
         logger.info("System Restart");
       }
     }
@@ -44,7 +48,6 @@ function runCheck() {
 }
 
 runCheck();
-exec("docker stop blockscout", (err, std) => {
-  console.log(std);
-});
-//exec("docker start blockscout");
+// exec("docker stop blockscout", (err, std) => {
+//   console.log(std);
+// });
