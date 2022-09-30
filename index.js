@@ -44,4 +44,4 @@ function runCheck() {
 }
 
 runCheck();
-//exec("docker restart blockscout");
+//exec("docker stop blockscout");
