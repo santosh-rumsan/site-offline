@@ -1,5 +1,5 @@
 const https = require("https");
-const { exec } = require("child_process");
+const spawn = require("child_process").spawn;
 
 const pino = require("pino");
 const transport = pino.transport({
@@ -43,4 +43,5 @@ function runCheck() {
   );
 }
 
-runCheck();
+//runCheck();
+spawn("docker", ["stop", "blockscout"], { stdio: "inherit" });
